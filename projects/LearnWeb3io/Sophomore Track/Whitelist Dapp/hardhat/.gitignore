@@ -1,4 +1,3 @@
-projects/LearnWeb3io/Freshmen Track/Own cryptocurrency/node_modules/.package-lock.json
 node_modules
 .env
 coverage
@@ -9,3 +8,4 @@ typechain-types
 #Hardhat files
 cache
 artifacts
+
