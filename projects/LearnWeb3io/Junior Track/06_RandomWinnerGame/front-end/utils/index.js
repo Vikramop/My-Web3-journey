@@ -3,7 +3,8 @@ import axios from "axios";
 export async function subgraphQuery(query) {
   try {
     // Replace YOUR-SUBGRAPH-URL with the url of your subgraph
-    const SUBGRAPH_URL = "YOUR-SUBGRAPH-URL";
+    const SUBGRAPH_URL =
+      "https://api.thegraph.com/subgraphs/name/vikramop/learnweb3";
     const response = await axios.post(SUBGRAPH_URL, {
       query,
     });
