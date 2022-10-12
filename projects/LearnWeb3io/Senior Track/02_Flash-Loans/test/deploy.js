@@ -1,14 +1,14 @@
-const { expect, assert } = require("chai");
-const { BigNumber } = require("ethers");
-const { ethers, waffle, artifacts } = require("hardhat");
-const hre = require("hardhat");
+const { expect, assert } = require('chai');
+const { BigNumber } = require('ethers');
+const { ethers, waffle, artifacts } = require('hardhat');
+const hre = require('hardhat');
 
-const { DAI, DAI_WHALE, POOL_ADDRESS_PROVIDER } = require("../config");
+const { DAI, DAI_WHALE, POOL_ADDRESS_PROVIDER } = require('../config');
 
-describe("Deploy a Flash Loan", function () {
-  it("Should take a flash loan and be able to return it", async function () {
+describe('Deploy a Flash Loan', function () {
+  it('Should take a flash loan and be able to return it', async function () {
     const flashLoanExample = await ethers.getContractFactory(
-      "FlashLoanExample"
+      'FlashLoanExample'
     );
 
     const _flashLoanExample = await flashLoanExample.deploy(
@@ -17,12 +17,12 @@ describe("Deploy a Flash Loan", function () {
     );
     await _flashLoanExample.deployed();
 
-    const token = await ethers.getContractAt("IERC20", DAI);
-    const BALANCE_AMOUNT_DAI = ethers.utils.parseEther("2000");
+    const token = await ethers.getContractAt('IERC20', DAI);
+    const BALANCE_AMOUNT_DAI = ethers.utils.parseEther('2000');
 
     // Impersonate the DAI_WHALE account to be able to send transactions from that account
     await hre.network.provider.request({
-      method: "hardhat_impersonateAccount",
+      method: 'hardhat_impersonateAccount',
       params: [DAI_WHALE],
     });
     const signer = await ethers.getSigner(DAI_WHALE);
