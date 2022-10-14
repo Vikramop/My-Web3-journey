@@ -53,6 +53,7 @@ describe('Attack', function () {
 
     const balanceGame = await _game.getBalance();
     // Balance of the Game contract should be 0
-    expect(balanceGame).to.equal(BigNumber.from('0'));
+    // expect(balanceGame).to.equal(BigNumber.from('0'));
+    expect(balanceGame).to.equal(BigNumber.from('0').toString());
   });
 });
