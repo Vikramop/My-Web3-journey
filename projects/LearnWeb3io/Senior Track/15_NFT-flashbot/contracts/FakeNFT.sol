@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
-//Deployed on feorli "0x4754EDeDB27fB647324b5cAc179520997e4c3FFc"
+//Deployed on georli "0x4754EDeDB27fB647324b5cAc179520997e4c3FFc"
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
