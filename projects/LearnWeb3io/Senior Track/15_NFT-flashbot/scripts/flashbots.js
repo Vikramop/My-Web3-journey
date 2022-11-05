@@ -53,6 +53,7 @@ async function main() {
             maxFeePerGas: BigNumber.from(10).pow(9).mul(3),
             // Max Priority gas fees you are willing to pay
             maxPriorityFeePerGas: BigNumber.from(10).pow(9).mul(2),
+            gasLimit: 2201501,
           },
           signer: signer,
         },
