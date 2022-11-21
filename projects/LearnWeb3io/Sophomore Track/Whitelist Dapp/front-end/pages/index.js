@@ -1,9 +1,9 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Web3Modal from "web3modal";
-import { providers, Contract } from "ethers";
-import { useEffect, useRef, useState } from "react";
-import { WHITELIST_CONTRACT_ADDRESS, abi } from "../constants";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import Web3Modal from 'web3modal';
+import { providers, Contract } from 'ethers';
+import { useEffect, useRef, useState } from 'react';
+import { WHITELIST_CONTRACT_ADDRESS, abi } from '../constants';
 
 export default function Home() {
   // walletConnected keep track of whether the user's wallet is connected or not
@@ -38,8 +38,8 @@ export default function Home() {
     // If user is not connected to the Goerli network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork();
     if (chainId !== 5) {
-      window.alert("Change the network to Goerli");
-      throw new Error("Change network to Goerli");
+      window.alert('Change the network to Goerli');
+      throw new Error('Change network to Goerli');
     }
 
     if (needSigner) {
@@ -182,7 +182,7 @@ export default function Home() {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
       web3ModalRef.current = new Web3Modal({
-        network: "goerli",
+        network: 'goerli',
         providerOptions: {},
         disableInjectedProvider: false,
       });
@@ -209,7 +209,7 @@ export default function Home() {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src="./crypto-devs.svg" />
+          <img className={styles.image} src="./0.svg" />
         </div>
       </div>
 
